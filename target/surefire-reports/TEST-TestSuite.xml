@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="6.595" tests="9" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="6.561" tests="9" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -67,13 +67,13 @@
     <property name="library.jansi.path" value="C:\Users\Suvneet.Singh\Downloads\apache-maven-3.6.0-bin\apache-maven-3.6.0\bin\..\lib\jansi-native"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="getAPITestWithHeaders" classname="com.qa.tester.GetAPIwithHeaders" time="1.48"/>
-  <testcase name="validateHeaders" classname="com.qa.tester.GetAPIwithHeaders" time="0.037"/>
-  <testcase name="validateResponseData" classname="com.qa.tester.GetAPIwithHeaders" time="0.015"/>
-  <testcase name="validateStatusCode" classname="com.qa.tester.GetAPIwithHeaders" time="0.003"/>
-  <testcase name="getAPITestWithoutHeaders" classname="com.qa.tester.GetAPIwithoutHeaders" time="3.813"/>
-  <testcase name="validateHeadersInResponse" classname="com.qa.tester.GetAPIwithoutHeaders" time="0.039"/>
-  <testcase name="validateResponseData" classname="com.qa.tester.GetAPIwithoutHeaders" time="0.014"/>
-  <testcase name="validateStatusCode" classname="com.qa.tester.GetAPIwithoutHeaders" time="0.006"/>
-  <testcase name="PostAPItest" classname="com.qa.tester.PostAPITest" time="0.823"/>
+  <testcase name="getAPITestWithHeaders" classname="com.qa.tester.GetAPIwithHeaders" time="1.204"/>
+  <testcase name="validateHeaders" classname="com.qa.tester.GetAPIwithHeaders" time="0.031"/>
+  <testcase name="validateResponseData" classname="com.qa.tester.GetAPIwithHeaders" time="0.016"/>
+  <testcase name="validateStatusCode" classname="com.qa.tester.GetAPIwithHeaders" time="0"/>
+  <testcase name="getAPITestWithoutHeaders" classname="com.qa.tester.GetAPIwithoutHeaders" time="0.833"/>
+  <testcase name="validateHeadersInResponse" classname="com.qa.tester.GetAPIwithoutHeaders" time="0.05"/>
+  <testcase name="validateResponseData" classname="com.qa.tester.GetAPIwithoutHeaders" time="0.016"/>
+  <testcase name="validateStatusCode" classname="com.qa.tester.GetAPIwithoutHeaders" time="0.016"/>
+  <testcase name="PostAPItest" classname="com.qa.tester.PostAPITest" time="4.026"/>
 </testsuite>
