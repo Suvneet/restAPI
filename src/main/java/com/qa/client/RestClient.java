@@ -12,6 +12,8 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.json.JSONException;
 
+import com.google.inject.internal.util.Stopwatch;
+
 
 public class RestClient {
 	
@@ -35,7 +37,7 @@ public class RestClient {
 		}
 		
 		
-	//2. Post method with headers
+	//3. Post method with headers
 		public CloseableHttpResponse post(String url, String entityString, HashMap <String, String> headerMap) throws ClientProtocolException, IOException, JSONException {
 			CloseableHttpClient  httpClient = HttpClients.createDefault();   //make client connection
 			HttpPost httppost = new  HttpPost(url);    // make connection with url
@@ -46,7 +48,9 @@ public class RestClient {
 			}			
 			CloseableHttpResponse closeAbleHttpResponse =  httpClient.execute(httppost);   //hit the get url
 			return closeAbleHttpResponse;	
-				}	
+				}
+		
+		
 		
 	
 

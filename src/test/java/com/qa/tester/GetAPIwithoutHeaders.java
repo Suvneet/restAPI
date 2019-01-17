@@ -18,6 +18,9 @@ import com.qa.base.testbase;
 import com.qa.client.RestClient;
 import com.qa.util.TestUtil;
 
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
 public class GetAPIwithoutHeaders extends testbase {
 	testbase testbases;
 	String serviceURL;
@@ -27,6 +30,7 @@ public class GetAPIwithoutHeaders extends testbase {
 	CloseableHttpResponse closeAbleHttpResponse;
 	String userPerPage;
 	String totalpagesInResponse;
+	Response resp;
 
 	@BeforeClass
 	public void setup() throws ClientProtocolException, IOException, JSONException {		
@@ -48,6 +52,7 @@ public class GetAPIwithoutHeaders extends testbase {
 	public void getAPITestWithoutHeaders() throws ClientProtocolException, IOException, JSONException {
 		restClient = new RestClient();
 		closeAbleHttpResponse = restClient.get(url);
+		resp =  RestAssured.get(url);
 		System.out.println("");
 		System.out.println("==================================");
 		System.out.println("       Get Request hitted!!!      ");
@@ -67,6 +72,27 @@ public class GetAPIwithoutHeaders extends testbase {
 		Assert.assertEquals(statusCode,RESPONSE_STATUS_CODE_200, "ASSERTION Failed :Status code is not 200!!!");
 		System.out.println("ASSERTION Passed : Status code is as expected!!!");
 		}
+	
+	@Test
+	public void validateResponseTime() {
+		long time_taken = resp.getTime();
+		System.out.println("Time taken :"+time_taken);
+		if (time_taken > 1500) {
+			System.out.println("Response is taking long time");			
+		}
+		else {
+			System.out.println("Response time is :"+time_taken);
+		}			
+	}
+	
+	@Test void filesize() {
+		
+		
+		
+		
+	}
+	
+	
 		
 	@Test
 	public void validateResponseData() throws JSONException, ParseException, IOException {

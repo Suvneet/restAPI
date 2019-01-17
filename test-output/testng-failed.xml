@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [AgJunction API check]">
+  <listeners>
+    <listener class-name="com.qa.ExtentReportListener.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="1" name="User-management(failed)">
     <classes>
       <class name="com.qa.tester.GetAPIwithHeaders">
         <methods>
           <include name="validateResponseData"/>
           <include name="setup"/>
+          <include name="teardown"/>
         </methods>
       </class> <!-- com.qa.tester.GetAPIwithHeaders -->
+      <class name="com.qa.tester.GetAPIwithoutHeaders">
+        <methods>
+          <include name="teardown"/>
+          <include name="validateResponseData"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.qa.tester.GetAPIwithoutHeaders -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- User-management(failed) -->
+</suite> <!-- Failed suite [AgJunction API check] -->
