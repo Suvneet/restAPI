@@ -12,7 +12,6 @@ import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.qa.base.testbase;
 import com.qa.client.RestClient;
@@ -76,22 +75,13 @@ public class GetAPIwithoutHeaders extends testbase {
 	@Test
 	public void validateResponseTime() {
 		long time_taken = resp.getTime();
-		System.out.println("Time taken :"+time_taken);
-		if (time_taken > 1500) {
-			System.out.println("Response is taking long time");			
+		if (time_taken > 500) {
+			System.out.println("Response is taking too long time");			
 		}
 		else {
 			System.out.println("Response time is :"+time_taken);
 		}			
 	}
-	
-	@Test void filesize() {
-		
-		
-		
-		
-	}
-	
 	
 		
 	@Test
