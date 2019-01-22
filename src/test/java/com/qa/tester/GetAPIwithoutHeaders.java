@@ -9,6 +9,7 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.openqa.selenium.support.CacheLookup;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -47,11 +48,13 @@ public class GetAPIwithoutHeaders extends testbase {
 		System.out.println("");
 		}
 	
-	@Test
+	@Test(threadPoolSize = 10)
 	public void getAPITestWithoutHeaders() throws ClientProtocolException, IOException, JSONException {
 		restClient = new RestClient();
 		closeAbleHttpResponse = restClient.get(url);
 		resp =  RestAssured.get(url);
+		long time_taken = resp.getTime();
+		System.out.println(time_taken);
 		System.out.println("");
 		System.out.println("==================================");
 		System.out.println("       Get Request hitted!!!      ");
@@ -59,7 +62,7 @@ public class GetAPIwithoutHeaders extends testbase {
 		System.out.println("");
 		}
 	
-	@Test
+	@Test(threadPoolSize = 10)
 	public void validateStatusCode() {
 		 //1. Status code   #########################
 		int statusCode = closeAbleHttpResponse.getStatusLine().getStatusCode();
@@ -73,18 +76,23 @@ public class GetAPIwithoutHeaders extends testbase {
 		}
 	
 	@Test
+	//(invocationCount = 10)
 	public void validateResponseTime() {
 		long time_taken = resp.getTime();
-		if (time_taken > 500) {
-			System.out.println("Response is taking too long time");			
+		System.out.println("");
+		System.out.println("=================================================");
+		System.out.println("             VALIDATE RESPONSE TIME              ");
+		System.out.println("=================================================");
+		if (time_taken > 1500) {
+		System.out.println("OOP's!!! Response is taking too long time: "+time_taken);
 		}
 		else {
-			System.out.println("Response time is :"+time_taken);
+		System.out.println("             Response time is: "+time_taken);
 		}			
 	}
 	
 		
-	@Test
+	@Test(threadPoolSize = 10)
 	public void validateResponseData() throws JSONException, ParseException, IOException {
 		
 		//2. JSON string check   #########################
@@ -118,7 +126,7 @@ public class GetAPIwithoutHeaders extends testbase {
 		}
 				
 	
-	@Test
+	@Test(threadPoolSize = 10)
 	public void validateHeadersInResponse() {			
 		//3. All headers ###########################
 		int i=1;
@@ -133,9 +141,9 @@ public class GetAPIwithoutHeaders extends testbase {
 					System.out.println("API_Header"+i+"-->"+header);
 					i++;
 				}
-		System.out.println("==================================");
+		System.out.println("===========================================");
 		System.out.println("TOTAL number of header's in response :"+i);
-		System.out.println("==================================");
+		System.out.println("===========================================");
 		System.out.println("");
 	}
 	

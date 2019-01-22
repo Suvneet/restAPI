@@ -50,7 +50,7 @@ public class putAPITest extends testbase {
 			long time_taken = BDD_response.getTime();
 			//System.out.println("Time taken :"+time_taken);
 			if (time_taken > 1500) {
-				System.out.println("Response is taking long time");			
+				System.out.println("Response is taking long time. ");			
 			}
 			else {
 				System.out.println("Response time is :"+time_taken);

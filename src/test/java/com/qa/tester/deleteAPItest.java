@@ -25,14 +25,11 @@ public class deleteAPItest extends testbase{
 	@Test
 	public void deleteAPI() {
 		RestAssured.baseURI=prop.getProperty("URL");
-			given().given().contentType("application/json")
+			given().contentType("application/json")
 			.when().delete(prop.getProperty("serviceURL"))
 			.then()
 			.statusCode(RESPONSE_STATUS_CODE_200)
-			.extract().response();
-				
-		
-		
+			.extract().response();				
 	}
 	
 }
