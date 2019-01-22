@@ -12,9 +12,6 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.json.JSONException;
 
-import com.google.inject.internal.util.Stopwatch;
-
-
 public class RestClient {
 	
 	//1. Get method without headers

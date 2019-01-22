@@ -1,4 +1,4 @@
-package com.qa.ExtentReportListener;
+package com.qa.ExtentReport;
 
 import java.io.File;
 import java.util.Calendar;
@@ -12,12 +12,11 @@ import org.testng.ISuiteResult;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.xml.XmlSuite;
-
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class ExtentReporterNG implements IReporter {
+public class extentReport implements IReporter {
 	private ExtentReports extent;
 
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites,

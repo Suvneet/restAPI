@@ -13,8 +13,6 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import org.testng.log4testng.Logger;
-
 import com.qa.base.testbase;
 import com.qa.client.RestClient;
 import com.qa.util.TestUtil;
