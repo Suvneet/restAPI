@@ -1,9 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="AgJunction API check" verbose="1" thread-count="1" parallel="false" >
 
-<listeners>
-	<listener class-name="com.qa.ExtentReport.extentReport" /> 
-</listeners>
+
 
   <test name="User-management">
     <classes>
