@@ -8,16 +8,33 @@
     <classes>
       <class name="com.qa.tester.GetAPIwithHeaders">
         <methods>
+          <include name="getAPITestWithHeaders"/>
           <include name="validateResponseData"/>
+          <include name="validateStatusCode"/>
+          <include name="validateHeaders"/>
           <include name="setup"/>
           <include name="teardown"/>
+          <include name="InitIate"/>
         </methods>
       </class> <!-- com.qa.tester.GetAPIwithHeaders -->
+      <class name="com.qa.tester.PostAPITest">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="PostAPItest"/>
+          <include name="InitIate"/>
+        </methods>
+      </class> <!-- com.qa.tester.PostAPITest -->
       <class name="com.qa.tester.GetAPIwithoutHeaders">
         <methods>
           <include name="teardown"/>
+          <include name="getAPITestWithoutHeaders"/>
           <include name="validateResponseData"/>
           <include name="setup"/>
+          <include name="validateHeadersInResponse"/>
+          <include name="validateResponseTime"/>
+          <include name="validateStatusCode"/>
+          <include name="InitIate"/>
         </methods>
       </class> <!-- com.qa.tester.GetAPIwithoutHeaders -->
     </classes>

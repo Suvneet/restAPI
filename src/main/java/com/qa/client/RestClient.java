@@ -48,8 +48,4 @@ public class RestClient {
 			CloseableHttpResponse closeAbleHttpResponse =  httpClient.execute(httppost);   //hit the get url
 			return closeAbleHttpResponse;	
 				}
-		
-		
-	
-
 }
