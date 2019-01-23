@@ -92,7 +92,11 @@ public class GetAPIwithoutHeaders extends testbase {
 	}
 	
 		
+<<<<<<< HEAD
 	@Test(threadPoolSize = 10)
+=======
+	@Test
+>>>>>>> dddbb83425ef92b691ea0736b690643deee66a04
 	public void validateResponseData() throws JSONException, ParseException, IOException {
 		
 		//2. JSON string check   #########################

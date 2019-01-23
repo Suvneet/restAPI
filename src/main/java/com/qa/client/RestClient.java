@@ -12,8 +12,11 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.json.JSONException;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> dddbb83425ef92b691ea0736b690643deee66a04
 public class RestClient {
 	
 	//1. Get method without headers

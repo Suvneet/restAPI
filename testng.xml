@@ -1,11 +1,16 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="AgJunction API check" verbose="1" thread-count="1" parallel="false" >
 
+<<<<<<< HEAD
 <!--
   <listeners>
 	<listener class-name="com.qa.ExtentReportListener.ExtentReportsClassVersion3" /> 
 </listeners>
 -->
+=======
+
+
+>>>>>>> dddbb83425ef92b691ea0736b690643deee66a04
   <test name="User-management">
     <classes>
       <class name="com.qa.tester.GetAPIwithHeaders"/>
